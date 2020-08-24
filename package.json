@@ -1,0 +1,76 @@
+{
+  "name": "pageturner",
+  "version": "1.0.0",
+  "description": "A reading tracker app",
+  "scripts": {
+    "dev": "nodemon server/src/index",
+    "createdb": "npx run.env createdb pageturner",
+    "format": "prettier --write \"client/src/**/*.{js,jsx}\"",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
+    "start": "parcel client/index.html --out-dir client/dist",
+    "build": "parcel build client/index.html"
+  },
+  "author": "Fabricio Waltrick",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@apollo/react-hooks": "^3.1.5",
+    "@svgr/parcel-plugin-svgr": "^5.4.0",
+    "@types/react": "^16.9.43",
+    "antd": "^4.4.2",
+    "apollo-cache-control": "^0.10.1-alpha.0",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "apollo-server": "^2.16.0",
+    "babel-plugin-emotion": "^10.0.33",
+    "chart.js": "^2.9.3",
+    "dayjs": "^1.8.29",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.0.0",
+    "graphql-tag": "^2.10.4",
+    "knex": "^0.21.2",
+    "less": "^3.12.2",
+    "objection": "^2.2.1",
+    "parcel-bundler": "^1.12.4",
+    "pg": "^8.3.0",
+    "react": "^16.13.1",
+    "react-big-calendar": "^0.26.0",
+    "react-chartjs-2": "^2.9.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-split-pane": "^0.1.91",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-imports": "^2.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "bufferutil": "^4.0.1",
+    "canvas": "^2.6.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "run.env": "^1.1.0",
+    "utf-8-validate": "^5.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+scalar Date
+
+type Bookshelf {
+  id: ID!
+  books: [Book]
+}
+
+type Book {
+  id: ID!
+  title: String!
+  author: String
+  pages: Int
+  genre: String
+  coverColor: String
+  startedAt: Date
+  plannedEnd: Date
+  active: Boolean
+  progress: Int
+  notes: String
+  review: Int
+}
+
+# type Author {
+#   id: ID!
+#   name: String!
+#   books: [Book]!
+# }
+
+input BookInput {
+  id: ID
+  title: String
+  author: String
+  genre: String
+  active: Boolean
+}
+
+input NewBookInput {
+  title: String!
+  author: String
+  pages: Int!
+  genre: String
+  coverColor: String
+  startedAt: Date
+  plannedEnd: String
+  active: Boolean
+  progress: Int
+  notes: String
+  review: Int
+}
+
+input EditBookInput {
+  title: String
+  author: String
+  pages: Int
+  genre: String
+  coverColor: String
+  startedAt: Date
+  plannedEnd: String
+  active: Boolean
+  progress: Int
+  notes: String
+  review: Int
+}
+
+type Query {
+  books(input: BookInput): [Book]
+  book(id: ID!): Book
+}
+
+type Mutation {
+  addBook(input: NewBookInput!): Book!
+  editBook(input: NewBookInput!): Book!
+  updateProgress(id: ID!, progress: Int!): Book!
+  # addReview()
+  deleteBook(id: ID!): Book!
+}
