@@ -4,9 +4,9 @@ import {
   LinkedinOutlined,
   GithubOutlined,
   MailOutlined,
-  GlobalOutlined,
+  LaptopOutlined,
 } from "@ant-design/icons"
-import Logo from "../images/pt_logo.svg"
+// import Logo from "../images/pt_logo.svg"
 import Navbar from "./Navbar"
 
 export default function Layout({ children }) {
@@ -27,18 +27,27 @@ export default function Layout({ children }) {
         <div>
           PageTurner ©2020 Created by Fabricio Waltrick for portfolio purposes
           only{" "}
-          <a target='_blank' href='https://github.com/fwaltrick'>
-            <GlobalOutlined
+          <a
+            target='_blank'
+            rel='noopener noreferrer nofollow'
+            href='https://waltrick.de'
+          >
+            <LaptopOutlined
               style={{ marginLeft: "0.5rem", fontSize: "1.1rem" }}
             />
           </a>
-          <a target='_blank' href='https://github.com/fwaltrick'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer nofollow'
+            href='https://github.com/fwaltrick'
+          >
             <GithubOutlined
               style={{ marginLeft: "0.5rem", fontSize: "1.2rem" }}
             />
           </a>
           <a
             target='_blank'
+            rel='noopener noreferrer nofollow'
             href='https://www.linkedin.com/in/fabricio-waltrick-988352164/'
           >
             <LinkedinOutlined

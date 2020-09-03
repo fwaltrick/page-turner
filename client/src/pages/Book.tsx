@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom"
 import gql from "graphql-tag"
 import { useQuery, useMutation } from "@apollo/react-hooks"
 
+interface RouterProps {
+  id: string
+}
+
 const GET_BOOK = gql`
   query GetBook($id: ID!) {
     book(id: $id) {
@@ -18,8 +22,8 @@ const GET_BOOK = gql`
   }
 `
 
-export default function Book() {
-  const { id } = useParams()
+export const Book: React.FC = () => {
+  let { id } = useParams<RouterProps>()
   const { data, loading, error } = useQuery(GET_BOOK, {
     variables: { id },
   })

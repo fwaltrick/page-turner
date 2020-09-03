@@ -1,7 +1,8 @@
 import React from "react"
 import { Result, Button } from "antd"
 import { Container } from "../components/App"
-import ErrorImg from "../images/errorImg.svg"
+// import ErrorImg from "../images/errorImg.svg"
+const ErrorImg = require("../images/errorImg.svg") as string
 
 export default function Shelves() {
   return (

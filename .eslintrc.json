@@ -4,8 +4,15 @@
     "prettier",
     "prettier/react",
     "react/jsx-uses-react",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "./tsconfig.json"
   ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 0
+  },
   "plugins": [],
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -14,9 +21,23 @@
       "jsx": true
     }
   },
+  "settings": {
+    "react": {
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    }
+  },
   "env": {
     "es6": true,
     "browser": true,
     "node": true
-  }
+  },
+  "compilerOptions": {
+    // ensure that nobody can accidentally use this config for a build
+    "noEmit": true
+  },
+
+  "include": [
+    // whatever paths you intend to lint
+    "src/**/*.ts"
+  ]
 }
